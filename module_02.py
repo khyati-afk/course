@@ -1,8 +1,5 @@
-def cmtoinches(x):
-    y = x * 0.393701
-    return y
+def cm_to_inches(cm):
+    return cm / 2.54
 
-
-def inchestocm(x):
-    y = x / 0.393701
-    return y
+def inches_to_cm(inches):
+    return inches * 2.54
