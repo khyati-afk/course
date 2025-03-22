@@ -1,14 +1,15 @@
-
-
+#################################################################################
+# Write a function that accepts an arbitrary number of numbers, and returns their mean
 def calculate_mean(*numbers):
     if not numbers:
         return None 
     return sum(numbers) / len(numbers)
 
-print(calculate_mean(1, 2, 3, 4, 5, 6))
+mean = calculate_mean(1, 2, 3, 4, 5, 6)
+print(f"mean = {mean}")
 
-'*******************************************************************************'
-
+#################################################################################
+# Write a function that accepts an arbitrary number of keyword arguments, and returns the name of the youngest student
 def youngest_students(**students):
     if not students:
         return None  
@@ -20,8 +21,11 @@ def youngest_students(**students):
 
 print(youngest_students(A=18, B=13, C=8, D=6))  
 
-'********************************************************************************'
-
+#################################################################################
+# Write a function that accepts the following arguments:
+# 1. total marks
+# 2. a variable number of student marks
+# and it return a list of percentage score of each student
 def calculate_percentages(total_marks, *student_marks):
     if total_marks == 0:
         return []  
@@ -29,8 +33,11 @@ def calculate_percentages(total_marks, *student_marks):
 
 print(calculate_percentages(20, 16, 8, 13, 18, 17, 19, 13))  
 
-'*********************************************************************************'
-
+#################################################################################
+#- Make a function (with the help of closures) such that whenever you call it, it gives you a new number in the series, starting from 1.
+# - add parameter to define the starting number of the series.
+# - add parameter to define the difference between two numbers in the series.
+# - add parameter to define the end number of the series.
 def number_series(start=1, step=1, stop=None):
     current = start - step  
 
@@ -51,5 +58,21 @@ print(series1())
 print(series1())  
 print(series1())  
 print(series1())  
+
+#################################################################################
+# create a module named my_math with the following functions
+# 1. factorial
+# 2. square_root
+# 3. cube_root
+
+#################################################################################
+# use random module to simulate a die roll (get a random number between 1 and 6)
+
+#################################################################################
+# print todays date using datetime module
+
+#################################################################################
+# ask user to enter a sentence, and find the frequency of each letter
+
 
 
