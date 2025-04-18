@@ -1,8 +1,10 @@
 def find(word, filePath):
     try:
         with open(filePath, "r", encoding="utf-8") as file:
-            content = file.read()
-            return word in content
+            for line in file:
+                if word in line:
+                    return True
+        return False
     except FileNotFoundError:
         print("File not found.")
         return False
@@ -11,8 +13,7 @@ def find(word, filePath):
 def count(word, filePath):
     try:
         with open(filePath, "r", encoding="utf-8") as file:
-            content = file.read()
-            return content.count(word)
+            return sum(line.count(word) for line in file)
     except FileNotFoundError:
         print("File not found.")
         return 0
@@ -33,4 +34,5 @@ def find_n_replace(old_word, new_word, filePath):
         print("File not found.")
 
 
+# Example usage
 print(count("the", "ugh.txt"))
