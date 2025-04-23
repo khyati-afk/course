@@ -1,3 +1,15 @@
+###########
+# Class 1 #
+#################################################################################
+# Write a function to reverse a given list using recursion
+
+
+#################################################################################
+# Write a function to sort a given list using recursion
+
+
+###########
+# Class 2 #
 #################################################################################
 # Write a function that accepts an arbitrary number of numbers, and returns their mean
 def calculate_mean(*numbers):
@@ -33,6 +45,8 @@ def calculate_percentages(total_marks, *student_marks):
 
 print(calculate_percentages(20, 16, 8, 13, 18, 17, 19, 13))  
 
+###########
+# Class 3 #
 #################################################################################
 #- Make a function (with the help of closures) such that whenever you call it, it gives you a new number in the series, starting from 1.
 # - add parameter to define the starting number of the series.

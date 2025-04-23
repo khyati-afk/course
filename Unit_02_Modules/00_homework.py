@@ -13,21 +13,20 @@ def factorial(x):
            factorial = factorial*i
         return factorial
 
+# usage:
 # factorial(23)
-
-##################################################################
 
 def square_root(x):
     return (x**(1/2))
 
+# usage:
 # square_root(49)
-
-##################################################################
 
 def cube_root(x):
 
     return round(x**(1/3))
 
+# usage:
 # cube_root(729)
 
 #################################################################################
@@ -38,28 +37,30 @@ import random
 def die_roll():
     return random.randint(1,6)
 
+# usage:
 # print(die_roll())
 
 #################################################################################
-# print todays date using datetime module
+# use datetime module to print todays date
 
 import datetime
 
 def today():
     return(datetime.datetime.now())
     
+# usage:
 # print(today())
 
 #################################################################################
-# ask user to enter a sentence, and find the frequency of each letter
+# use Counter from collections module, to find the frequency of each letter in a given sentence
 
 from collections import Counter
 
-def frequency():
-    sentence = input("Enter a sentence: ")
+def frequency(sentence):
     sentence = sentence.lower()
     char_count = Counter(sentence)  
     for char, count in sorted(char_count.items()):
         print(f"{char}: {count}")
 
-frequency()
+# usage:
+# frequency(sentence = "The quick brown fox jumps over the lazy dog.")

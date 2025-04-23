@@ -21,18 +21,19 @@ def count(word, filePath):
 
 def find_n_replace(old_word, new_word, filePath):
     try:
-        with open(filePath, "r", encoding="utf-8") as file:
-            content = file.read()
-
-        updated_content = content.replace(old_word, new_word)
-
-        with open(filePath, "w", encoding="utf-8") as file:
-            file.write(updated_content)
-
+        with open(filePath, "r") as infile, open("temp.txt", "w") as outfile:
+            for line in infile:
+                updated_line = line.replace(old_word, new_word)
+                outfile.write(updated_line)
+        with open("temp.txt", "r") as outfile, open(filePath, "w") as outfile:
+            for line in outfile:
+                outfile.write(line)
         print(f"Replaced all occurrences of '{old_word}' with '{new_word}'.")
     except FileNotFoundError:
         print("File not found.")
 
 
-# Example usage
+# usage:
+print(find("the", "ugh.txt"))
 print(count("the", "ugh.txt"))
+print(find_n_replace("the", "that", "ugh.txt"))
